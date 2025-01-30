@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.API", "NZWalks.API\NZWalks.API.csproj", "{086A3A30-3111-4D37-BA73-E083702363C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Domain", "NZWalks.Domain\NZWalks.Domain.csproj", "{DFFBB7A0-856D-42DF-A273-BEB503AEF236}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Infrastructure", "NZWalks.Infrastructure\NZWalks.Infrastructure.csproj", "{0B2E5338-CC04-46A6-BCCB-2C4CBAF2E5D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Application", "NZWalks.Application\NZWalks.Application.csproj", "{8AF9EB52-34A6-414B-BACC-D01DD223E0C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086A3A30-3111-4D37-BA73-E083702363C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086A3A30-3111-4D37-BA73-E083702363C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086A3A30-3111-4D37-BA73-E083702363C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086A3A30-3111-4D37-BA73-E083702363C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2E5338-CC04-46A6-BCCB-2C4CBAF2E5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2E5338-CC04-46A6-BCCB-2C4CBAF2E5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2E5338-CC04-46A6-BCCB-2C4CBAF2E5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2E5338-CC04-46A6-BCCB-2C4CBAF2E5D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF9EB52-34A6-414B-BACC-D01DD223E0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF9EB52-34A6-414B-BACC-D01DD223E0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF9EB52-34A6-414B-BACC-D01DD223E0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF9EB52-34A6-414B-BACC-D01DD223E0C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
