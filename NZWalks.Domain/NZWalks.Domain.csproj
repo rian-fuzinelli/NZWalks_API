@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="NewFolder\**" />
+    <Compile Remove="Queries\**" />
     <EmbeddedResource Remove="NewFolder\**" />
+    <EmbeddedResource Remove="Queries\**" />
     <None Remove="NewFolder\**" />
+    <None Remove="Queries\**" />
   </ItemGroup>
 
   <ItemGroup>

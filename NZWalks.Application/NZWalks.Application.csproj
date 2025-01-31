@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DTOs\DifficultyDto.cs" />
+    <Compile Remove="DTOs\WalkDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NZWalks.Domain\NZWalks.Domain.csproj" />
     <ProjectReference Include="..\NZWalks.Infrastructure\NZWalks.Infrastructure.csproj" />
   </ItemGroup>

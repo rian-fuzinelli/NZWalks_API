@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.Application.DTOs;
 using NZWalks.Domain.Models;
+using NZWalks.Domain.Repositories;
 using NZWalks.Infrastructure.Data;
 
 namespace NZWalks.API.Controllers
@@ -12,30 +13,19 @@ namespace NZWalks.API.Controllers
     {
 
         private readonly NZWalksDbContext _dbContext;
+        private readonly 
 
-        public RegionsController(NZWalksDbContext dbContext)
+
+        public RegionsController(IRegionRepository regionRepository)
         {
-            _dbContext = dbContext;
+            _regionRepository = regionRepository;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var regions = _dbContext.Regions.ToList();
-
-            var regionsDto = new List<RegionDto>();
-
-            foreach (var region in regions) 
-            {
-                regionsDto.Add(new RegionDto(region.Code, region.Name, region.RegionImageUrl)
-                {
-                    Code = region.Code,
-                    Name = region.Name,
-                    RegionImageUrl = region.RegionImageUrl
-                });
-            }
-
-            return Ok(regionsDto);
+            var regions = await _regionService.GetAllAsync();
+            return Ok();
         }
 
         [HttpGet("{id}")]
