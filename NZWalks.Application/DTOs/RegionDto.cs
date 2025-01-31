@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NZWalks.Application.DTOs
 {
-    public record RegionDto(string Code, string Name)
+    public record RegionDto(string Code, string Name, string RegionImageUrl)
     {
 
     }
