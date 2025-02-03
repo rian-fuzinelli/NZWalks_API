@@ -12,7 +12,7 @@ using NZWalks.Infrastructure.Repositories;
 
 namespace NZWalks.CrossCutting.IoC
 {
-    public static class IocExtension
+    public static class IoCExtension
     {
         public static void AddServices(this IServiceCollection services)
         {
