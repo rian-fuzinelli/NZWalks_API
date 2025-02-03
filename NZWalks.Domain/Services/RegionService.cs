@@ -5,63 +5,57 @@ using System.Text;
 using System.Threading.Tasks;
 using NZWalks.Domain.Models;
 using NZWalks.Domain.Repositories;
-using NZWalks.Infrastructure.Services;
-
 namespace NZWalks.Domain.Services
 {
-    public class RegionService : IRegionService
+    public class RegionService : IRegionRepository
     {
-        private readonly IRegionService _regionService;
+        private readonly IRegionRepository _regionRepository;
 
-        public RegionService(IRegionService regionService) 
+        public RegionService(IRegionRepository regionRepository) 
         {
-            _regionService = regionService;
+            _regionRepository = regionRepository;
         }
 
         public async Task<Region> CreateAsync(Region region)
         {
-            var regions = await _regionService.GetById(region.Id);
-            
-            if (regions == null)
-            {
-                throw new Exception($"There's not a region with the id" + region.Id);
-            }
+          var regions = new Region();
+            region.Name = region.Name;
+            region.Code = region.Code;
+            region.RegionImageUrl = region.RegionImageUrl;
 
-            return await _regionService.CreateAsync(regions);
+            return await _regionRepository.CreateAsync(region);
         }
 
-        public async Task<List<Region>> GetAllAsync()
+        public async Task<IEnumerable<Region>> GetAllAsync()
         {
-            return await _regionService.GetAllAsync();
+            return await _regionRepository.GetAllAsync();
         }
 
         public async Task<Region> GetById(Guid Id)
         {
-            var regions = await _regionService.GetById(Id) ?? throw new Exception("There's not a region with the id" + Id);
+            var regions = await _regionRepository.GetById(Id) ?? throw new Exception("There's not a region with the id" + Id);
 
             return regions;
         }
         
-        public async Task<Region> UpdateAsync(Region region)
+        public async Task<Region> UpdateAsync(Guid id, Region region)
         {
-            var regions = await _regionService.GetById(region.Id);
-                {
+            var regions = await _regionRepository.GetById(id);
                 if (regions == null)
                     throw new Exception($"There's not a region with the id {region.Id}");
 
-                return await _regionService.UpdateAsync(region);
-            }
+                return await _regionRepository.UpdateAsync(id, region);
         }
 
         public async Task<Region> Remove(Guid Id)
         {
-            var regions = await _regionService.GetById(Id);
+            var regions = await _regionRepository.GetById(Id);
             {
                 if (regions == null)
                 {
                     throw new Exception($"There's not a region with the id Id {Id}");
                 }
-                return await _regionService.Remove(Id);
+                return await _regionRepository.Remove(Id);
             }
         }
     }
