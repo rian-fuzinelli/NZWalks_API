@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NZWalks.Domain.Models;
 using NZWalks.Domain.Repositories;
 using NZWalks.Domain.Services;
+using NZWalks.Infrastructure.Data;
 using NZWalks.Infrastructure.Repositories;
 
 namespace NZWalks.CrossCutting.IoC
@@ -16,6 +17,7 @@ namespace NZWalks.CrossCutting.IoC
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<RegionService>();
+            services.AddScoped<NZWalksDbContext>();
         }
 
         public static void AddRepositories(this IServiceCollection services) 

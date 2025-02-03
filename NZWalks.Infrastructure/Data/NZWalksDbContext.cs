@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using NZWalks.Domain.Models;
+using NZWalks.Domain.Repositories;
 
 namespace NZWalks.Infrastructure.Data
 {
@@ -9,9 +10,8 @@ namespace NZWalks.Infrastructure.Data
         public NZWalksDbContext(DbContextOptions<NZWalksDbContext> dbContextOptions) : base(dbContextOptions)
         {
         }
-        public DbSet<Difficulty> Difficulties { get; set; }
+
         public DbSet<Region> Regions { get; set; }
-        public DbSet<Walk> Walks { get; set; }
 
     }
 }

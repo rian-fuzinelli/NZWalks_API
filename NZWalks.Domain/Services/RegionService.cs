@@ -7,7 +7,7 @@ using NZWalks.Domain.Models;
 using NZWalks.Domain.Repositories;
 namespace NZWalks.Domain.Services
 {
-    public class RegionService : IRegionRepository
+    public class RegionService
     {
         private readonly IRegionRepository _regionRepository;
 

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NZWalks.Domain.Models;
 using NZWalks.Domain.Repositories;
 using NZWalks.Infrastructure.Data;
@@ -11,36 +10,47 @@ namespace NZWalks.Infrastructure.Repositories
 {
     public class RegionRepository : IRegionRepository
     {
-        private readonly IRegionRepository _regionRepository;
+        private readonly NZWalksDbContext _dbContext;
 
-        public RegionRepository(IRegionRepository regionRepository)
+        public RegionRepository(NZWalksDbContext dbContext)
         {
-            _regionRepository = regionRepository;
+            _dbContext = dbContext;
         }
-        public virtual async Task<Region> CreateAsync(Region region)
+
+        public async Task<Region> CreateAsync(Region region)
         {
-            await _regionRepository.CreateAsync(region);
+            await _dbContext.Regions.AddAsync(region);
+            await _dbContext.SaveChangesAsync();
             return region;
         }
 
         public async Task<IEnumerable<Region>> GetAllAsync()
         {
-            return await _regionRepository.GetAllAsync();
+            return await _dbContext.Regions.ToListAsync();
         }
 
         public async Task<Region> GetById(Guid id)
         {
-            return await _regionRepository.GetById(id);
+           return await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
         }
-
-        public Task<Region> Remove(Guid Id)
+        public async Task<Region> Remove(Guid id)
         {
-           return _regionRepository.Remove(Id);
+            var region = await _dbContext.Regions.FindAsync(id);
+            if (region == null)
+            {
+                throw new Exception("There's not a region with the id" + id);
+            }
+
+            _dbContext.Regions.Remove(region);
+            await _dbContext.SaveChangesAsync();
+
+            return region;
         }
-
-        public virtual async Task<Region> UpdateAsync(Guid id, Region region)
+        public async Task<Region> UpdateAsync(Guid id, Region region)
         {
-            return await _regionRepository.UpdateAsync(id, region);
+            _dbContext.Regions.Update(region);
+            await _dbContext.SaveChangesAsync();
+            return region;
         }
     }
 }
