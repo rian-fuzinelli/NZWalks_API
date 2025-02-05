@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NZWalks.Application.DTOs;
+using MediatR;
 
 namespace NZWalks.Application.Commands
 {
-    public record RegionUpdateCommand(string Code, string Name, string RegionImageUrl)
+    public record RegionUpdateCommand(Guid Id, string Code, string Name, string RegionImageUrl) : IRequest<bool>
     {
     }
 }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.API", "NZWalks.API\NZWalks.API.csproj", "{086A3A30-3111-4D37-BA73-E083702363C5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Domain", "NZWalks.Domain\NZWalks.Domain.csproj", "{DFFBB7A0-856D-42DF-A273-BEB503AEF236}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Infrastructure", "NZWalks.Infrastructure\NZWalks.Infrastructure.csproj", "{0B2E5338-CC04-46A6-BCCB-2C4CBAF2E5D7}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Application", "NZWa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.CrossCutting.IoC", "NZWalks.CrossCutting.IoC\NZWalks.CrossCutting.IoC.csproj", "{D5744B11-F00D-46B5-9182-2E4FC146BACE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Presentation", "NZWalks.Presentation\NZWalks.Presentation.csproj", "{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{086A3A30-3111-4D37-BA73-E083702363C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{086A3A30-3111-4D37-BA73-E083702363C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{086A3A30-3111-4D37-BA73-E083702363C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{086A3A30-3111-4D37-BA73-E083702363C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFFBB7A0-856D-42DF-A273-BEB503AEF236}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{D5744B11-F00D-46B5-9182-2E4FC146BACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5744B11-F00D-46B5-9182-2E4FC146BACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5744B11-F00D-46B5-9182-2E4FC146BACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

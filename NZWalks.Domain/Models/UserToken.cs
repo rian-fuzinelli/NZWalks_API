@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NZWalks.Application.DTOs
+namespace NZWalks.Domain.Models
 {
-    public record RegionDto(string Code, string Name, string RegionImageUrl)
+    public class UserToken
     {
-
+        public string Token { get; set; } = string.Empty;
     }
 }

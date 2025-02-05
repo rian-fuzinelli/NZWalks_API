@@ -1,6 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
-using NZWalks.Application.DTOs;
+﻿using Microsoft.AspNetCore.Mvc;
 using NZWalks.Domain.Models;
 using NZWalks.Domain.Repositories;
 using NZWalks.Domain.Services;
