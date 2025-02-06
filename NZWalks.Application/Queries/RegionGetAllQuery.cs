@@ -8,7 +8,7 @@ using NZWalks.Domain.Models;
 
 namespace NZWalks.Application.Queries
 {
-    public record RegionGetAllQuery : IRequest<List<Region>>
+    public record RegionGetAllQuery : IRequest<List<RegionEntity>>
     {
     }
 }

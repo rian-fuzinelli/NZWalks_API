@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NZWalks.Domain.Models
 {
-    public class Region
+    public class RegionEntity
     {
         public Guid Id { get; protected set; }
 

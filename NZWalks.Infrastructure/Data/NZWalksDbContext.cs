@@ -11,7 +11,7 @@ namespace NZWalks.Infrastructure.Data
         {
         }
 
-        public DbSet<Region> Regions { get; set; }
+        public DbSet<RegionEntity> Regions { get; set; }
 
     }
 }

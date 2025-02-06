@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Application", "NZWa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.CrossCutting.IoC", "NZWalks.CrossCutting.IoC\NZWalks.CrossCutting.IoC.csproj", "{D5744B11-F00D-46B5-9182-2E4FC146BACE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Presentation", "NZWalks.Presentation\NZWalks.Presentation.csproj", "{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.WebApi", "NZWalks.Presentation\NZWalks.WebApi.csproj", "{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -17,36 +17,29 @@ namespace NZWalks.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<Region> CreateAsync(Region region)
+        public async Task<RegionEntity> CreateAsync(RegionEntity region)
         {
             await _dbContext.Regions.AddAsync(region);
             await _dbContext.SaveChangesAsync();
             return region;
         }
 
-        public async Task<IEnumerable<Region>> GetAllAsync()
+        public async Task<IEnumerable<RegionEntity>> GetAllAsync()
         {
             return await _dbContext.Regions.ToListAsync();
         }
 
-        public async Task<Region> GetById(Guid id)
+        public async Task<RegionEntity> GetById(Guid id)
         {
-           return await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
+            return await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
         }
-        public async Task<Region> Remove(Guid id)
+        public async Task<RegionEntity> Remove(Guid id)
         {
             var region = await _dbContext.Regions.FindAsync(id);
-            if (region == null)
-            {
-                throw new Exception("There's not a region with the id" + id);
-            }
-
             _dbContext.Regions.Remove(region);
-            await _dbContext.SaveChangesAsync();
-
             return region;
         }
-        public async Task<Region> UpdateAsync(Guid id, Region region)
+        public async Task<RegionEntity> UpdateAsync(Guid id, RegionEntity region)
         {
             _dbContext.Regions.Update(region);
             await _dbContext.SaveChangesAsync();

@@ -9,10 +9,10 @@ namespace NZWalks.Domain.Repositories
 {
     public interface IRegionRepository
     {
-        Task<IEnumerable<Region>> GetAllAsync();
-        Task<Region> GetById(Guid id);
-        Task<Region> CreateAsync(Region region);
-        Task<Region> UpdateAsync(Guid id, Region region);
-        Task<Region> Remove(Guid id);
+        Task<IEnumerable<RegionEntity>> GetAllAsync();
+        Task<RegionEntity> GetById(Guid id);
+        Task<RegionEntity> CreateAsync(RegionEntity region);
+        Task<RegionEntity> UpdateAsync(Guid id, RegionEntity region);
+        Task<RegionEntity> Remove(Guid id);
     }
 }

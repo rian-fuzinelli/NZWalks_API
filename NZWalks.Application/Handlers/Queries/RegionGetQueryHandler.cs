@@ -18,7 +18,7 @@ namespace NZWalks.Application.Handlers.Queries
             _regionRepository = regionRepository;
         }
 
-        public async Task<Region> Handler(RegionGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<RegionEntity> Handler(RegionGetByIdQuery request, CancellationToken cancellationToken)
         {
             var regions = await _regionRepository.GetById(request.Id);
 

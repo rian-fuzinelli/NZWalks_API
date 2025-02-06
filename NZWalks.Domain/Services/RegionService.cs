@@ -16,9 +16,9 @@ namespace NZWalks.Domain.Services
             _regionRepository = regionRepository;
         }
 
-        public async Task<Region> CreateAsync(Region region)
+        public async Task<RegionEntity> CreateAsync(RegionEntity region)
         {
-          var regions = new Region();
+          var regions = new RegionEntity();
             region.Name = region.Name;
             region.Code = region.Code;
             region.RegionImageUrl = region.RegionImageUrl;
@@ -26,19 +26,19 @@ namespace NZWalks.Domain.Services
             return await _regionRepository.CreateAsync(region);
         }
 
-        public async Task<IEnumerable<Region>> GetAllAsync()
+        public async Task<IEnumerable<RegionEntity>> GetAllAsync()
         {
             return await _regionRepository.GetAllAsync();
         }
 
-        public async Task<Region> GetById(Guid Id)
+        public async Task<RegionEntity> GetById(Guid Id)
         {
             var regions = await _regionRepository.GetById(Id) ?? throw new Exception("There's not a region with the id" + Id);
 
             return regions;
         }
         
-        public async Task<Region> UpdateAsync(Guid id, Region region)
+        public async Task<RegionEntity> UpdateAsync(Guid id, RegionEntity region)
         {
             var regions = await _regionRepository.GetById(id);
                 if (regions == null)
@@ -47,7 +47,7 @@ namespace NZWalks.Domain.Services
                 return await _regionRepository.UpdateAsync(id, region);
         }
 
-        public async Task<Region> Remove(Guid Id)
+        public async Task<RegionEntity> Remove(Guid Id)
         {
             var regions = await _regionRepository.GetById(Id);
             {

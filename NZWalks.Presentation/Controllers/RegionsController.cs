@@ -12,34 +12,33 @@ namespace NZWalks.API.Controllers
     {
         private readonly RegionService _regionService;
 
-
         public RegionsController(RegionService regionService)
         {
             _regionService = regionService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Region>>> GetAll()
+        public async Task<ActionResult<List<RegionEntity>>> GetAll()
         {
             return Ok(await _regionService.GetAllAsync());
         }
 
         [HttpGet("{id}")]
 
-        public async Task<ActionResult<Region>> GetById([FromRoute] Guid id)
+        public async Task<ActionResult<RegionEntity>> GetById([FromRoute] Guid id)
         {
             return Ok(await _regionService.GetById(id));
         }
 
         [HttpPost]
-        public async Task<ActionResult<Region>> Create([FromBody] Region request)
+        public async Task<ActionResult<RegionEntity>> Create([FromBody] RegionEntity request)
         {
             var region = await _regionService.CreateAsync(request);
             return Created();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] Region request)
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] RegionEntity request)
         {
             await _regionService.UpdateAsync(id, request);
             return NoContent();

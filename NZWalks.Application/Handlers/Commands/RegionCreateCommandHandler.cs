@@ -21,7 +21,7 @@ namespace NZWalks.Application.Handlers
 
         public async Task<string> HandleAsync(RegionCreateCommand request, CancellationToken cancellationToken)
         {
-            var region = new Region
+            var region = new RegionEntity
             {
                 Code = request.Code,
                 Name = request.Name,
