@@ -43,7 +43,7 @@ namespace NZWalks.API
             builder.Services.AddServices();
             builder.Services.AddRepositories();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<NZWalksDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"), b => b.MigrationsAssembly("NZWalks.API")));
+            builder.Services.AddDbContext<NZWalksDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"), b => b.MigrationsAssembly("NZWalks.WebApi")));
 
             var app = builder.Build();
 

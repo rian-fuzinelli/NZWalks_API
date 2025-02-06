@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.CrossCutting.IoC", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.WebApi", "NZWalks.Presentation\NZWalks.WebApi.csproj", "{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZWalks.Tests.Unit", "NZWalks.Tests.Unit.Application\NZWalks.Tests.Unit.csproj", "{6DDB66D3-A84C-4ED9-B7C8-8DC61CE48A2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E5F494-16FB-4A60-9168-4B11D3D3F4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDB66D3-A84C-4ED9-B7C8-8DC61CE48A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDB66D3-A84C-4ED9-B7C8-8DC61CE48A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDB66D3-A84C-4ED9-B7C8-8DC61CE48A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDB66D3-A84C-4ED9-B7C8-8DC61CE48A2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
